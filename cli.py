@@ -23,3 +23,9 @@ if response.status_code == 200:
 else:
     # Print an error message if the request failed
     print('Failed to get a response:', response.status_code, response.text)
+
+
+
+'''
+curl -X POST http://51.16.160.207:5000/generate -H "Content-Type: application/json" -d '{"prompt": "Hello, how are you today?"}'
+'''
