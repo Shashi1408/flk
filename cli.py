@@ -1,8 +1,8 @@
 import requests
 import json
 
-# Define the API endpoint
-url = 'http://51.16.160.207:5000/generate'
+# Define the API endpoint, refer flk.py 
+url = 'http://<ip of server running flk.py>:5000/generate'
 
 # Define the data to send in the request
 '''
