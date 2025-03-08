@@ -23,4 +23,7 @@ if __name__ == '__main__':
 '''
 systemctl edit ollama.service
 Environment="OLLAMA_HOST=0.0.0.0:11434"
+#######
+curl -X POST http://51.17.206.168:5000/generate -H "Content-Type: application/json" -d "{\"prompt\": \"$inp\" }"
+#######
 '''
