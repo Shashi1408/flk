@@ -20,6 +20,10 @@ response = requests.post(url, headers={'Content-Type': 'application/json'}, data
 if response.status_code == 200:
     # Print the response from the server
     print('Response:', response.json())
+    print('==============')
+    print(response.text)
+    op = json.loads(response.text)['response']
+    print(op)
 else:
     # Print an error message if the request failed
     print('Failed to get a response:', response.status_code, response.text)
