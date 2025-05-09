@@ -1,0 +1,20 @@
+#install ollama
+curl -fsSL https://ollama.com/install.sh | sh
+
+#run ollama
+ollama serve
+
+#make ollama accessible across internet
+#in file /etc/systemd/system/ollama.service
+Environment="OLLAMA_HOST=0.0.0.0:11434"
+
+systemctl daemon-reload
+systemctl enable ollama
+systemctl start ollama
+systemctl status ollama
+
+#pull llm model
+ollama pull llama3.2
+
+#run the model
+ollama run llama3.2
